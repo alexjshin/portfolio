@@ -1,13 +1,17 @@
 import React, {Fragment} from 'react';
+import { ChakraProvider } from '@chakra-ui/react'
 import './App.css';
 
 function App() {
   return (
-    <Fragment>
+    <ChakraProvider>
+      <Fragment>
       <div>
         Hello, world!
       </div>
     </Fragment>
+    </ChakraProvider>
+    
   );
 }
 
