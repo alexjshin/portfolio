@@ -1,6 +1,7 @@
 "use client";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import Link from "next/link";
 import Head from "next/head";
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillGithub,
@@ -12,13 +13,11 @@ import headshot from '/public/headshot-transparent.png';
 import yale from '/public/yale-logo.png';
 import cfa from '/public/cfa-logo.png';
 import deepmedia from '/public/deepmedia-logo.png';
-import web1 from '/public/web1.png';
-import web2 from '/public/web2.png';
-import web3 from '/public/web3.png';
-import web4 from '/public/web4.png';
-import web5 from '/public/web5.png';
-import web6 from '/public/web6.png';
-import { useState, Fragment } from "react";
+import shutter from '/public/shutter.png';
+import nyctravel from '/public/nyctravel.png';
+import tictactoe from '/public/tictactoe.png';
+import politic from '/public/politic.png';
+import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,10 +54,18 @@ export default function Home() {
               </p>
             </div>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-              <AiFillLinkedin className="dark:text-white"/>
-              <AiFillMail className="dark:text-white"/>
-              <AiFillYoutube className="dark:text-white"/>
-              <AiFillGithub className="dark:text-white" />
+              <Link href = "https://www.linkedin.com/in/alexjshin/" target="_blank">
+                <AiFillLinkedin className="dark:text-white"/>
+              </Link>
+              <Link href = "mailto:alex.shin@yale.edu" target="_blank">
+                <AiFillMail className="dark:text-white"/>
+              </Link>
+              <Link href = "https://www.youtube.com/@alexshin1202" target="_blank">
+                <AiFillYoutube className="dark:text-white"/>
+              </Link>
+              <Link href = "https://github.com/alexjshin" target="_blank">
+                <AiFillGithub className="dark:text-white" />
+              </Link>
             </div>
             <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 m-10 overflow-hidden md:h-96 md:w-96">
               <Image src = {headshot} layout = "fill" objectFit="cover"/>
@@ -72,34 +79,32 @@ export default function Home() {
                 My journey as a software engineer, developer, and student.
               </p>
             </div>
-            <div className="lg:flex gap-10 max-w-3xl mx-auto">
-              <div className="lg:w-400 text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-white dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
+            <div className="lg:flex lg:justify-items-stretch gap-10 max-w-screen-lg mx-auto">
+              <div className=" text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-white dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
                 <Image src={yale} width = {250} height = {250} className="mx-auto"/>
                 <h2 className="text-black text-xl font-bold py-8 pb-2">Class of 2025</h2>
-                {/* <p className = "py-2">yo</p>
-                <h4 className="py-4 text-teal-600">Design tools I used</h4> */}
                 <span className="font-semibold underline">Major</span>
                 <p className="text-black py-1"> Electrical Engineering and Computer Science</p>
                 <span className="font-semibold underline">Activities</span>
                 <p className="text-black py-1">Yale Club Water Polo, Engineers without Borders, Yale Politic (Tech Team), Yale Computer Society, Yale
 Entrepreneurial Society</p>
               </div>
-              <div className="lg:w-400 text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-slate-300 dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
-                <Image src={deepmedia} width = {200} height = {200} className="mx-auto"/>
+              <div className="lg:min-w-[13rem] text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-slate-300 dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
+                <Image src={deepmedia} width = {175} height = {175} className="mx-auto"/>
                 <h2 className="text-black text-xl font-bold py-8 pb-2">Software Engineering/Product Development Intern</h2>
                 <p className="text-black py-1 font-semibold">June 2022 - December 2022</p>
                 <span className="font-semibold underline">Skills Used</span>
                 <p className="text-black py-1">React.js, Node.js, AWS, Python</p>
                 <span className="font-semibold underline">Primary Projects</span>
-                <p className="text-black py-1">
+                <div className="text-black py-1">
                   <ul>
                     <li>Overviewed English-Korean auto translations.</li>
                     <li>Implemented waveform generator in python for audio files for Dubsync as well as general frontend organization and design.</li>
                   </ul>
-                </p>
+                </div>
               </div>
-              <div className="lg:w-400 text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-white dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
-                <Image src={cfa} width = {250} heigh = {250} className="mx-auto"/>
+              <div className=" text-center shadow-lg p-10 pt-7 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-white dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
+                <Image src={cfa} width = {230} height = {230} className="mx-auto"/>
                 <h2 className="text-black text-xl font-bold py-8 pb-2">Software Engineering Intern</h2>
                 <p className="text-black py-1 font-semibold">May 2023 - August 2023</p>
                 <span className="font-semibold underline">Skills Used</span>
@@ -117,26 +122,63 @@ Entrepreneurial Society</p>
                 I've done remote work for
               </p>
             </div>
-            <div className="flex flex-col gap-10 lg:flex-row lg:flex-wrap">
-              <div className="basis-1/3 flex-1">
-                <Image src={web1} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout = "responsive"/>
+            <div className="pb-20 flex flex-col gap-10 lg:flex-row lg:flex-wrap">
+              <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
+                <div className=" rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
+                  <h1 className="p-5 font-bold text-lg underline text-black text-center">Shutter Visualizations</h1>
+                  <Image src = {shutter} className = "rounded-3xl pb-2 w-3/4 h-3/4 m-auto"></Image>
+                  <p className="px-10 pb-1 text-sm text-center">Created interactive visualizations using data collected by Shutter, 
+                    a robot photographer from the Yale Interactive Machines Group. Used Plotly, MatPlotLib, Numpy, and Scipy
+                    python packages in Juypter Notebook. Used React.js and Chakra Ui to host these visualizations on a fully-frontend
+                    interactive website. Aided in research and analysis of shutter data of ~100 different social interactions.
+                  </p>
+                </div>
+                <div className="flex gap-10 pb-5 mt-10">
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/shutter_web">View in Github</Link>
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://main--ornate-sundae-b6f214.netlify.app/">View Website</Link>
+                </div>
               </div>
-              <div className="basis-1/3 flex-1">
-                <Image src={web2} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout = "responsive"/>
+              <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
+                <div className="mb-15 rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
+                  <h1 className="p-5 font-bold text-lg underline text-black text-center">TicTacToe Game</h1>
+                  <Image src = {tictactoe} className = "rounded-3xl mb-2 pb-3 w-3/4 h-3/4 m-auto"></Image>
+                  <p className="px-10 pb-1 text-sm text-center">
+                    Very special project to me as it this was one of my very first web apps I made. Fully-frontend webapp built using React.js. Responsive on mobile devices as well.
+                  </p>
+                </div>
+                <div className="flex gap-10 pb-5 pt-20 mt-12">
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/tictactoe">View in Github</Link>
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://bit.ly/alexjshintictactoe">View Website</Link>
+                </div>
               </div>
-              <div className="basis-1/3 flex-1">
-                <Image src={web3} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout = "responsive"/>
+              <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
+                <div className="pb-5 flex flex-col rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
+                  <h1 className="p-5 font-bold text-lg underline text-black text-center">New York Travel</h1>
+                  <Image src = {nyctravel} className = "rounded-3xl pb-2 w-3/4 h-3/4 m-auto"></Image>
+                  <p className="px-10 pb-1 text-sm text-center">
+                    Developed a web application for creating trip itineraries for New York using SQLite, React.js, Node.js, and Express, which provides interactive timeline features and convenient links to transportation options. Used Google Maps API.
+                  </p>
+                </div>
+                <div className="flex gap-10 pb-5 pt-20">
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/yale-cpsc-419-sp23/project-project-group-6/tree/main/new-york-travel">View in Github</Link>
+                </div>
               </div>
-              <div className="basis-1/3 flex-1">
-                <Image src={web4} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout = "responsive"/>
-              </div>
-              <div className="basis-1/3 flex-1">
-                <Image src={web5} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout = "responsive"/>
-              </div>
-              <div className="basis-1/3 flex-1">
-                <Image src={web6} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout = "responsive"/>
+              <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
+                <div className="pb-10 flex flex-col rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
+                  <h1 className="p-5 font-bold text-lg underline text-black text-center">Yale Politic</h1>
+                  <Image src = {politic} className = "rounded-3xl pb-2 w-3/4 h-3/4 m-auto"></Image>
+                  <p className="px-10 pb-1 text-sm text-center">
+                    Worked with the Tech Team for the Yale Politic newspaper for the frontend development of the Yale Politic website.
+                    Designed and developed primary user interface functions: scrolling artical boxes, navigation bar, dropdown menus (+general graphic design/UI). Deployed website to over 6000+ Yale students.
+                    Utilized React.js, Node.js, AWS, Python.
+                  </p>
+                </div>
+                <div className="flex gap-10 pb-5">
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://thepolitic.org/">View Website</Link>
+                </div>
               </div>
             </div>
+            
           </section>
         </main>
       </div>
