@@ -1,6 +1,6 @@
 "use client";
 
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Link from "next/link";
 import Head from "next/head";
 import {BsFillMoonStarsFill} from 'react-icons/bs';
@@ -20,7 +20,7 @@ import politic from '/public/politic.png';
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <ChakraProvider>
 
@@ -38,9 +38,9 @@ export default function Home() {
               <ul className="flex items.center">
                 <li className="dark:text-white"><BsFillMoonStarsFill onClick = {() => setDarkMode(!darkMode)}className = "cursor-pointer text-2xl"/></li>
                 <li>
-                  <a href = "public/Alex Shin Resume 2023.pdf" target="_blank" className="bg-gradient-to-br from-blue-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
+                  <Link href = "/Alex Shin Resume 2023.pdf" target = "_blank" className="bg-gradient-to-br from-blue-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
                     Resume
-                  </a>
+                  </Link>
                 </li>
 
               </ul>
@@ -50,7 +50,7 @@ export default function Home() {
               <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Developer and Engineer</h3>
               <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-2xl mx-auto dark:text-slate-400">
                 Currently a <span className="text-teal-500">third-year</span> undergraduate pursuing an Bachelor of Science at <span className="text-teal-500">Yale College</span> majoring in <span className="text-teal-500">Electrical Engineering</span> and <span className="text-teal-500">Computer Science</span>. 
-                Join me down below and let's get started!
+                Join me down below and let&apos;s get started!
               </p>
             </div>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
@@ -118,8 +118,7 @@ Entrepreneurial Society</p>
             <div>
               <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">
-                Since the beginning of m y journey as a feelance developer, 
-                I've done remote work for
+                Some of my work as a software developer.
               </p>
             </div>
             <div className="pb-20 flex flex-col gap-10 lg:flex-row lg:flex-wrap">
@@ -139,14 +138,15 @@ Entrepreneurial Society</p>
                 </div>
               </div>
               <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
-                <div className="mb-15 rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
+                <div className="mb-15 pb-3 rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
                   <h1 className="p-5 font-bold text-lg underline text-black text-center">TicTacToe Game</h1>
                   <Image src = {tictactoe} className = "rounded-3xl mb-2 pb-3 w-3/4 h-3/4 m-auto"></Image>
                   <p className="px-10 pb-1 text-sm text-center">
-                    Very special project to me as it this was one of my very first web apps I made. Fully-frontend webapp built using React.js. Responsive on mobile devices as well.
+                    Including this because it was a very special project to me as it this was one of my very first web apps I made. Fully-frontend webapp built using React.js. Responsive on mobile devices as well.
+                    Was based of a React tutorial template. 
                   </p>
                 </div>
-                <div className="flex gap-10 pb-5 pt-20 mt-12">
+                <div className="flex gap-10 pb-5 pt-12 mt-12">
                   <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/tictactoe">View in Github</Link>
                   <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://bit.ly/alexjshintictactoe">View Website</Link>
                 </div>
