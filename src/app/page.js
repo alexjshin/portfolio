@@ -45,16 +45,17 @@ export default function Home() {
           </nav>
           <div className = "text-center p-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Alex Shin</h2>
-            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Developer and Designer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-slate-400">
-              Freelancer providing services for programming and design content needs. Join me down below and let's get cracking
+            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Developer and Engineer</h3>
+            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-2xl mx-auto dark:text-slate-400">
+              Currently a <span className="text-teal-500">third-year</span> undergraduate pursuing an Bachelor of Science at <span className="text-teal-500">Yale College</span> majoring in <span className="text-teal-500">Electrical Engineering</span> and <span className="text-teal-500">Computer Science</span>. 
+              Join me down below and let's get started!
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <AiFillLinkedin/>
-            <AiFillMail/>
-            <AiFillYoutube/>
-            <AiFillGithub />
+            <AiFillLinkedin className="dark:text-white"/>
+            <AiFillMail className="dark:text-white"/>
+            <AiFillYoutube className="dark:text-white"/>
+            <AiFillGithub className="dark:text-white" />
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 m-10 overflow-hidden md:h-96 md:w-96">
             <Image src = {headshot} layout = "fill" objectFit="cover"/>
