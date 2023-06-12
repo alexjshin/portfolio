@@ -89,7 +89,7 @@ export default function Home() {
                 <p className="text-black py-1">Yale Club Water Polo, Engineers without Borders, Yale Politic (Tech Team), Yale Computer Society, Yale
 Entrepreneurial Society</p>
               </div>
-              <div className="lg:min-w-[13rem] text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-slate-300 dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
+              <div className="lg:min-w-[13rem] text-center shadow-lg p-10 rounded-xl my-10 mx-auto bg-gradient-to-b from-indigo-500 to-white dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-500">
                 <Image src={deepmedia} width = {175} height = {175} className="mx-auto"/>
                 <h2 className="text-black text-xl font-bold py-8 pb-2">Software Engineering/Product Development Intern</h2>
                 <p className="text-black py-1 font-semibold">June 2022 - December 2022</p>
