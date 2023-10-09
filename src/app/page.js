@@ -38,7 +38,7 @@ export default function Home() {
               <ul className="flex items.center">
                 <li className="dark:text-white"><BsFillMoonStarsFill onClick = {() => setDarkMode(!darkMode)}className = "cursor-pointer text-2xl"/></li>
                 <li>
-                  <Link href = "/Alex Shin Resume 2023.pdf" target = "_blank" className="bg-gradient-to-br from-blue-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
+                  <Link href = "/Alex_Shin_Resume_2023.pdf" target = "_blank" className="bg-gradient-to-br from-blue-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
                     Resume
                   </Link>
                 </li>
