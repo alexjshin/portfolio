@@ -15,7 +15,7 @@ import cfa from '/public/cfa-logo.png';
 import deepmedia from '/public/deepmedia-logo.png';
 import shutter from '/public/shutter.png';
 import nyctravel from '/public/nyctravel.png';
-import tictactoe from '/public/tictactoe.png';
+import server from '/public/serverhttp.png';
 import politic from '/public/politic.png';
 import { useState } from "react";
 
@@ -132,23 +132,21 @@ Entrepreneurial Society</p>
                     interactive website. Aided in research and analysis of shutter data of ~100 different social interactions.
                   </p>
                 </div>
-                <div className="flex gap-10 pb-5 mt-10">
-                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/shutter_web">View in Github</Link>
+                <div className="flex gap-10 pb-5 pt-12 mt-12">
+                  {/* <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/shutter_web">View in Github</Link> */}
                   <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://main--ornate-sundae-b6f214.netlify.app/">View Website</Link>
                 </div>
               </div>
               <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
                 <div className="mb-15 pb-3 rounded-lg object-cover " width={'100%'} height={'100%'} layout = "responsive">
-                  <h1 className="p-5 font-bold text-lg underline text-black text-center">TicTacToe Game</h1>
-                  <Image src = {tictactoe} className = "rounded-3xl mb-2 pb-3 w-3/4 h-3/4 m-auto"></Image>
+                  <h1 className="p-5 font-bold text-lg underline text-black text-center">HTTP/1.x Protocol + Server</h1>
+                  <Image src = {server} className = "rounded-3xl mb-2 pb-3 w-3/4 h-3/4 m-auto"></Image>
                   <p className="px-10 pb-1 text-sm text-center">
-                    Including this because it was a very special project to me as it this was one of my very first web apps I made. Fully-frontend webapp built using React.js. Responsive on mobile devices as well.
-                    Was based of a React tutorial template. 
+                    Built a Asynchronuous non-blocking I/O HTTP/1.x Server in Java, adhering to RFC9112, enabling efficient handling of concurrent HTTP requests across multiple domains using a single IP address. The server leveraged multhitheaded async I/O with  multiplexing loops, providing high throughput and low latency.
                   </p>
                 </div>
                 <div className="flex gap-10 pb-5 pt-12 mt-12">
-                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/tictactoe">View in Github</Link>
-                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://bit.ly/alexjshintictactoe">View Website</Link>
+                  <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/alexjshin/server_http_1.x">View in Github</Link>
                 </div>
               </div>
               <div className="rounded-lg shadow-xl dark:shadow-slate-400 bg-slate-400 basis-1/3 flex-1" >
@@ -159,7 +157,7 @@ Entrepreneurial Society</p>
                     Developed a web application for creating trip itineraries for New York using SQLite, React.js, Node.js, and Express, which provides interactive timeline features and convenient links to transportation options. Used Google Maps API.
                   </p>
                 </div>
-                <div className="flex gap-10 pb-5 pt-20">
+                <div className="flex gap-10 pb-5 pt-20 mt-5">
                   <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://github.com/yale-cpsc-419-sp23/project-project-group-6/tree/main/new-york-travel">View in Github</Link>
                 </div>
               </div>
@@ -173,7 +171,7 @@ Entrepreneurial Society</p>
                     Utilized React.js, Node.js, AWS, Python.
                   </p>
                 </div>
-                <div className="flex gap-10 pb-5">
+                <div className="flex gap-10 pb-5 pt-4 mt-12">
                   <Link className="mx-auto hover:underline hover:text-blue-600" target="_blank" href = "https://thepolitic.org/">View Website</Link>
                 </div>
               </div>
